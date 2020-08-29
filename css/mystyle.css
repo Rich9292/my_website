@@ -1,0 +1,91 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#nav_bar {
+	display: flex; /* use flexbox to align items along row/column */
+	flex-direction: row; /* use to designate vertical/horizontal axis as main/secondary */
+	/* flex-direction:row; (main axis = horizontal, secondary axis = vertical)*/
+	/* flex-direction: column; opposite of row */
+	justify-content: space-around; /* use to align items along main axis */
+	align-items: center; /* use to align items along secondary axis */
+	
+	background-color: #1C1C1C;
+	position: sticky; /* sticks to position after scrolling */
+	top: 0px; /* for some reason we need to define the top if we use sticky position */
+}
+
+.toggle_menu_button {
+	position: absolute;
+	top: .75rem;
+	right: 1rem;
+	display: none;
+	flex-direction: column; /*align items vertically */
+	justify-content: space-between; /* vertically space bars of hamburger menu */
+	width: 30px;
+	height: 21px;
+}
+
+.toggle_menu_button .bar {
+	height: 3px;
+	width: 100%;
+	background-color: white;
+	border-radius: 10px;
+}
+
+a.nav_link {
+	display: flex;
+	align-items: center; /*center vertically*/
+	justify-content: space-around; /*spread out horizontaly */
+	width: 50%; /* 50% for two links, 25% for 4 links, etc.*/
+	height: 100%;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	float: left;
+	text-decoration: none;
+}
+
+a.nav_link:hover {
+	background-color: #303030;
+}
+#logo {
+	color: white;
+	font-size: 1.5rem;
+	width: 25%;
+	text-align: center;
+}
+
+#background_div {
+	height: 200vh;
+	background-color: red;
+}
+
+@media all and (max-width: 400px) {
+	.toggle_menu_button {
+		display: flex;
+	}
+
+	#nav_bar {
+		flex-direction: column;
+	}
+	a.nav_link {
+		display: none;
+		width: 100%;
+		padding: 5px;
+	}
+
+	a.nav_link.active {
+		display: flex;
+	}
+
+}
+
+/* Can add styling for landscape mode also
+@media all and (orientation: landscape) {
+	#nav_bar{
+		background-color: #1C1C1C;
+	}
+}
+*/
