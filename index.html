@@ -6,21 +6,38 @@
 	    <meta charset="UTF-8">
 	    <title>Website_Title</title>
 	    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	    <style>
+	        /* Style to center the text in the middle of the page */
+	        .hello-lucile {
+	            position: absolute;
+	            top: 50%;
+	            left: 50%;
+	            transform: translate(-50%, -50%);
+	            font-size: 5rem; /* Adjust size as needed */
+	            font-weight: bold;
+	            color: #ff5733; /* Change color if needed */
+	            text-align: center;
+	        }
+	    </style>
 	</head>
 	<body>
 		<!-- generic navigation bar with links to other pages -->
-		<div id = "nav_bar">
-			<div id = "logo">Company Logo</div>
-			<a class = "nav_link" href = "index.html">home</a>
-			<a class = "nav_link" href = "page_2.html">page 2</a>
-			<a href = "#" class = "toggle_menu_button" >
-				<span class = "bar"></span>
-				<span class = "bar"></span>
-				<span class = "bar"></span>
+		<div id="nav_bar">
+			<div id="logo">Company Logo</div>
+			<a class="nav_link" href="index.html">home</a>
+			<a class="nav_link" href="page_2.html">page 2</a>
+			<a href="#" class="toggle_menu_button">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
 			</a>
 		</div>
 
-		<div id = "background_div" >Home Page</div>
+		<div id="background_div">Home Page</div>
+
+		<!-- Giant Hello Lucile in the middle of the page -->
+		<div class="hello-lucile">HELLO LUCILE</div>
+
 	</body>
-	<script src="js/script.js"></script> <!-- need to put script at end or it will run before html-->
+	<script src="js/script.js"></script> <!-- need to put script at end or it will run before html -->
 </html>
