@@ -60,6 +60,7 @@ a.nav_link:hover {
 #background_div {
 	height: 200vh;
 	background-color: red;
+    z-index: 0;
 }
 
 @media all and (max-width: 400px) {
@@ -80,6 +81,16 @@ a.nav_link:hover {
 		display: flex;
 	}
 
+}
+
+#three-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Prevents the canvas from blocking clicks */
+    z-index: 1; /* Makes sure it stays behind other content */
 }
 
 /* Can add styling for landscape mode also
